@@ -22,7 +22,7 @@
         <input type="password" id="password_confirmation" name="password_confirmation" class="form-control">
     </div>
 
-    <button type="submit" class="btn btn-primary">Register</button>
+    <button type="submit" class="btn btn-secondary">Register</button>
 </form>
 </div>
 

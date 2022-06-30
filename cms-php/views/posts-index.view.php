@@ -15,9 +15,9 @@
         <tr>
             <td><?= $post->id ?></td>
             <td><?= $post->title ?></td>
-            <td><a href="/posts/show?id=<?= $post->id ?>" class="btn btn-secondary">Show</a> <a href="/posts/edit?id=<?=
-                $post->id ?>" class="btn btn-secondary">Edit</a> <a href="/posts/destroy?id=<?=
-                $post->id ?>" class="btn btn-secondary">Delete</a></td>
+            <td><a href="/posts/show?id=<?= $post->id ?>" class="btn btn-outline-dark">Show</a> <a href="/posts/edit?id=<?=
+                $post->id ?>" class="btn btn-outline-dark mx-2">Edit</a> <a href="/posts/destroy?id=<?=
+                $post->id ?>" class="btn btn-outline-dark">Delete</a></td>
         </tr>
     <?php endforeach; ?>
 </table>

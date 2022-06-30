@@ -18,7 +18,7 @@ class ApiRecipesController
 
     public function store()
     {
-
+        $recipesData = json_decode(file_get_contents('php://input'), ARRAY_FILTER_USE_KEY);
         App::get('database')->insert('recipes', $_POST);
         return [
             'status' => 'ok'

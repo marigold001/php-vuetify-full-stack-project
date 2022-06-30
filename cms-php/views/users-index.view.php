@@ -7,7 +7,7 @@
         <th>ID</th>
         <th>Name</th>
         <th>
-            <a href="/users/create" class="btn btn-light">Add new Post</a>
+            <a href="/users/create" class="btn btn-light">Add new User</a>
         </th>
 
     </tr>
@@ -16,9 +16,9 @@
         <tr>
             <td><?= $user->id ?></td>
             <td><?= $user->name ?></td>
-            <td><a href="/users/show?id=<?= $user->id ?>" class="btn btn-secondary">Show</a> <a href="/users/edit?id=<?=
-                $user->id ?>" class="btn btn-secondary">Edit</a> <a href="/users/destroy?id=<?=
-                $user->id ?>" class="btn btn-secondary">Delete</a></td>
+            <td><a href="/users/show?id=<?= $user->id ?>" class="btn btn-outline-dark">Show</a> <a href="/users/edit?id=<?=
+                $user->id ?>" class="btn btn-outline-dark mx-2">Edit</a> <a href="/users/destroy?id=<?=
+                $user->id ?>" class="btn btn-outline-dark">Delete</a></td>
         </tr>
     <?php endforeach; ?>
 </table>

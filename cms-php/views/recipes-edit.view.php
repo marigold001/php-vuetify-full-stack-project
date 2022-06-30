@@ -1,6 +1,6 @@
 <?php require_once "views/partials/header.php"; ?>
 <div class="content">
-<form action="/recipes/edit" class="reduceSize" method="recipe">
+<form action="/recipes/edit" class="reduceSize" method="post">
     <input type="hidden" name="id" value="<?= $recipe->id ?>">
 
     <div class="form-group">

@@ -52,7 +52,7 @@ class QueryBuilder
         $sql = sprintf("INSERT INTO %s (%s) VALUES (%s)",
             $table,
             implode(", " , array_keys($data)),
-            ":" . implode(", :" , array_keys($data)));
+            ":" . implode(", :" , array_values($data)));
 
         $query = $this->pdo->prepare($sql);
 

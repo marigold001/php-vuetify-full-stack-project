@@ -62,7 +62,6 @@ $router->get('users/destroy', 'UsersController@destroy');
 //COOKBOOKS
 $router->get('cookbooks', 'CookbooksController@index');
 $router->get('cookbooks/create', 'CookbooksController@create');
-$router->post('cookbooks', 'CookbooksController@store');
 $router->get('cookbooks/show', 'CookbooksController@show');
 $router->get('cookbooks/edit', 'CookbooksController@edit');
 $router->post('cookbooks/edit', 'CookbooksController@update');

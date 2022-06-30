@@ -1,7 +1,13 @@
 <template>
     <v-container>
+      <v-row>
+          <v-col>
+            <h2 class="font_title">Recipes</h2>
+          </v-col>
+        </v-row>
       <v-row justify="center">
-          <v-dialog
+        
+        <v-dialog
           v-model="dialog"
           max-width="600px"
           >
@@ -17,8 +23,9 @@
                       {{error}}
                       </v-card-text>
                     </v-card-text>
-              <v-card-title>
+              <v-card-title style="justify-content: space-between;">
                 <span class="styleOne">ADD A RECIPE</span>
+                <v-btn outlined @click="dialog = false">X</v-btn>
               </v-card-title>
               <v-card-text>
                 <v-container>
@@ -75,6 +82,7 @@
       </v-row>
 
         <!-- Content of the page, content is received from app.vue as a prop -->
+        
         <v-row>
           <v-col
           v-for="(recipe,index) in dataResponse"
@@ -159,16 +167,14 @@ export default {
               preparation_time: this.preparation_time,
               description: this.description
             })
-            axios.post("http://localhost:8087/recipes", {
-            recipesData: {
-                id: this.dataResponse.length - 1,
-                title: this.recipeName,
-                img: this.recipeImageURL,
-                difficulty: this.difficulty,
-                preparation_time: this.preparation_time,
-                description: this.description
-            }
-            })
+            axios.post("http://localhost:8087/recipes", [
+                this.dataResponse.length - 1,
+                this.recipeName,
+                this.recipeImageURL,
+                this.difficulty,
+                this.preparation_time,
+                this.description
+            ])
             .then(function(response) { 
               console.log(response)
             })
@@ -195,3 +201,18 @@ export default {
     }
 }
 </script>
+
+<style lang="scss" scoped>
+
+.styleOne {
+  word-break: break-word;
+}
+
+.font_title {
+  font-family: "Julius Sans One", sans-serif;
+  // font-size: 70px;
+  // line-height: 90%;
+  word-break: break-word;
+  font-size: 35px;
+}
+</style>

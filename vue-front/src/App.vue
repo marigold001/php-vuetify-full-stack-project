@@ -59,9 +59,11 @@ export default {
 // Styles
 .styleOne {
   font-family: "Montserrat", sans-serif;
+  font-weight: bold;
 }
 .styleTwo {
   font-family: "EB Garamond";
+  font-weight: bold;
 }
 .addingBorder {
   border-top: 1.5px solid rgb(231, 231, 231);
@@ -70,15 +72,19 @@ export default {
   border-bottom: 1.5px solid rgb(231,231,231);
 }
 .fadedBackground {
-  background: rgba(224,224,224,0.6);
+  background: rgba(224,224,224,0.8);
   padding: 15px;
   margin: 25px 15px 0px 25px;
-  color: rgba(0,0,0,0.6);
+  color: rgba(0,0,0,1);
   font-size: 18pt;
   font-family: "montserrat", sans-serif;
   line-height: 100%;
 }
 .sizeAdjust {
   font-size: 16px;
+}
+
+.v-btn {
+  font-weight: bold;
 }
 </style>

@@ -18,7 +18,7 @@
                     </v-col>
 
                     <v-col offset="1" cols="10">
-                        <v-btn block outlined  x-small @click="validate" tile class="styleTwo">SEND</v-btn>
+                        <v-btn block outlined  small @click="validate" tile class="styleTwo">SEND</v-btn>
                     </v-col>
                 </v-row>
             </v-form>
@@ -51,14 +51,12 @@ export default {
         // If the form is valid by :rules, reset the form
         validate() {
             if(this.$refs.form.validate()) {
-                axios.post("http://localhost:8087/users", {
-                    usersData: {
-                        id: null,
-                        name: this.name,
-                        email: this.email,
-                        message: this.message
-                    }
-                })
+                axios.post("http://localhost:8087/users", [
+                        null,
+                        this.name,
+                        this.email,
+                        this.message
+                ])
                 .then(function(response) {
                     console.log(response)
                 })
@@ -70,6 +68,8 @@ export default {
                     name:this.name,
                     email:this.email
                 })
+
+                alert("Message succesfuly sent.");
             this.$refs.form.reset() 
             }
 

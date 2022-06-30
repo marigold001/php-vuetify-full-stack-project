@@ -6,10 +6,8 @@
     <tr>
         <th>ID</th>
         <th>Cookbook Name</th>
-<!--        <th>Difficulty</th>-->
-        <th>Subtitle</th>
         <th>
-            <a href="/cookbooks/create" class="btn btn-light">Add new Post</a>
+            <a href="/cookbooks/create" class="btn btn-light">Add new Cookbook</a>
         </th>
 
     </tr>
@@ -18,10 +16,9 @@
         <tr>
             <td><?= $cookbook->id ?></td>
             <td><?= $cookbook->title ?></td>
-            <td><?= $cookbook->subtitle ?></td>
-            <td><a href="/cookbooks/show?id=<?= $cookbook->id ?>" class="btn btn-secondary">Show</a> <a href="/cookbooks/edit?id=<?=
-                $cookbook->id ?>" class="btn btn-secondary">Edit</a> <a href="/cookbooks/destroy?id=<?=
-                $cookbook->id ?>" class="btn btn-secondary">Delete</a></td>
+            <td><a href="/cookbooks/show?id=<?= $cookbook->id ?>" class="btn btn btn-outline-dark">Show</a> <a href="/cookbooks/edit?id=<?=
+                $cookbook->id ?>" class="btn btn btn-outline-dark mx-2">Edit</a> <a href="/cookbooks/destroy?id=<?=
+                $cookbook->id ?>" class="btn btn btn-outline-dark">Delete</a></td>
         </tr>
     <?php endforeach; ?>
 </table>

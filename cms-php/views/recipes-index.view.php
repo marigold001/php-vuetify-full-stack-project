@@ -7,7 +7,7 @@
         <th>ID</th>
         <th>Recipe Name</th>
         <th>
-            <a href="/recipes/create" class="btn btn-light">Add new Post</a>
+            <a href="/recipes/create" class="btn btn-light">Add new Recipe</a>
         </th>
 
     </tr>
@@ -17,9 +17,9 @@
             <td><?= $recipe->id ?></td>
             <td><?= $recipe->title ?></td>
 
-            <td><a href="/recipes/show?id=<?= $recipe->id ?>" class="btn btn-secondary">Show</a> <a href="/recipes/edit?id=<?=
-                $recipe->id ?>" class="btn btn-secondary">Edit</a> <a href="/recipes/destroy?id=<?=
-                $recipe->id ?>" class="btn btn-secondary">Delete</a></td>
+            <td><a href="/recipes/show?id=<?= $recipe->id ?>" class="btn btn-outline-dark">Show</a> <a href="/recipes/edit?id=<?=
+                $recipe->id ?>" class="btn btn-outline-dark mx-2">Edit</a> <a href="/recipes/destroy?id=<?=
+                $recipe->id ?>" class="btn btn-outline-dark">Delete</a></td>
         </tr>
     <?php endforeach; ?>
 </table>

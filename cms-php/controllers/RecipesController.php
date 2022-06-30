@@ -19,10 +19,8 @@ class RecipesController {
     public function store()
     {
         $recipesData = json_decode(file_get_contents('php://input'), ARRAY_FILTER_USE_KEY);
-
         //uraditi prethodno sanitizaciju i validaciju !
-        App::get('database')->insert('recipes', $recipesData['recipesData']);
-
+        App::get('database')->insert('recipes', $_POST);
         return redirect('/recipes');
     }
 

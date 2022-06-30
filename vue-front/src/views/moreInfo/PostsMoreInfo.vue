@@ -1,22 +1,22 @@
 <template>
     <div>
         <v-row justify="center">
+            <v-btn  text class="ma-14 styleOne hover_effect_btn" to="/posts">Go Back</v-btn>
             <v-col cols="10">
-                <v-card tile outlined>
+                <v-card tile outlined style="margin-top: 25px;">
                   <v-img max-height="40vh" :src="postsResponse[$route.params.post].img"></v-img>
-                  <v-card-title class="styleTwo">{{postsResponse[$route.params.post].title}}</v-card-title>
+                  <v-card-title style="word-break: break-word" class="styleTwo">{{postsResponse[$route.params.post].title}}</v-card-title>
                 </v-card>
             </v-col>
-            <v-btn outlined text class="ma-4 styleOne" to="/posts">Go Back</v-btn>
         </v-row>
         <v-row>
             <v-col
             >
                 <v-card outlined>
-                    <v-card-subtitle>{{postsResponse[$route.params.post].subtitle}}</v-card-subtitle>
-                    <v-card-text class="pa-4 borderLine">{{postsResponse[$route.params.post].chapter}}</v-card-text>
-                    <v-card-text class="pa-4 borderLine">{{postsResponse[$route.params.post].chapter_two}}</v-card-text>
-                    <v-card-text class="pa-4 borderLine">{{postsResponse[$route.params.post].chapter_three}}</v-card-text>
+                    <v-card-title>{{postsResponse[$route.params.post].subtitle}}</v-card-title>
+                    <v-card-text class="pa-4 borderLine styleTwo">{{postsResponse[$route.params.post].chapter}}</v-card-text>
+                    <v-card-text class="pa-4 borderLine styleTwo">{{postsResponse[$route.params.post].chapter_two}}</v-card-text>
+                    <v-card-text class="pa-4 borderLine styleTwo">{{postsResponse[$route.params.post].chapter_three}}</v-card-text>
                 </v-card>
             </v-col>
         </v-row>
@@ -44,3 +44,18 @@ export default {
     }
 }
 </script>
+
+<style lang="scss" scoped>
+
+.hover_effect_btn:hover {
+    background-color: rgb(100,100,100);
+    color: #fff;
+}
+
+@media only screen and (min-width: 1200px) {
+
+    .styleTwo {
+        font-size: 18px;
+    }
+}
+</style>

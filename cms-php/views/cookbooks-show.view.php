@@ -1,12 +1,21 @@
 <?php require_once "views/partials/header.php"; ?>
 <div class="content">
-<h1><?= $cookbook->title ?></h1>
+    <button class="btn btn-dark"><a href="/cookbooks" class="link-light"><i class="bi bi-arrow-90deg-left"></i> <span class="ml-1">Go back</span></a></button>
+
+    <h2><?= $cookbook->title ?></h2>
 
 <div>
-    <strong>Image URL:</strong><?= $cookbook->img ?>
+    <strong>Subtitle: </strong><?= $cookbook->subtitle ?>
 </div>
-    <div><strong>Difficulty:</strong><?= $cookbook->difficulty ?></div>
-    <div><strong>Preparation-time:</strong><?= $cookbook->preparation_time ?></div>
-    <div><strong>Description:</strong><?= $cookbook->description ?></div>
+    <div><strong>Text: </strong><?= $cookbook->text ?></div>
 </div>
 <?php require_once "views/partials/footer.php"; ?>
+<style>
+    a {
+        color: #fff;
+    }
+
+    a:hover {
+        color: #fff;
+    }
+</style>

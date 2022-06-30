@@ -28,16 +28,16 @@ class CookbooksController {
 
     public function show()
     {
-        $recipe = App::get('database')->getOne('cookbooks', $_GET['id']);
+        $cookbook = App::get('database')->getOne('cookbooks', $_GET['id']);
 
-        return view('cookbooks-show', compact('recipe'));
+        return view('cookbooks-show', compact('cookbook'));
     }
 
     public function edit()
     {
-        $recipe = App::get('database')->getOne('cookbooks', $_GET['id']);
+        $cookbook = App::get('database')->getOne('cookbooks', $_GET['id']);
 
-        return view('cookbooks-edit', compact('recipe'));
+        return view('cookbooks-edit', compact('cookbook'));
     }
 
     public function update()

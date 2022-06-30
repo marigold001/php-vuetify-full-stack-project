@@ -2,7 +2,7 @@
 return [
     'database' => [
         'username' => 'root',
-        'password' => 'admin',
+        'password' => '',
         'dbname' => 'classic_gravy',
         'host' => '127.0.0.1',
         'options' => [
