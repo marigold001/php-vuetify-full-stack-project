@@ -57,6 +57,14 @@ export default {
 
 <style lang="scss">
 // Styles
+.html {
+  font-size: 18px;
+}
+
+p {
+  font-size: 1rem;
+  line-height: 27px;
+}
 .styleOne {
   font-family: "Montserrat", sans-serif;
   font-weight: bold;

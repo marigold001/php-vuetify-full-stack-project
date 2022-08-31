@@ -4,12 +4,10 @@
       <v-col md="5" cols="12" class="text-center">
         <v-card tile flat >
           <v-card-title class="ml-4 font_f_title font_size_xs justify-center">Classic Gravy</v-card-title>
-          <v-card-text class="styleOne mr-2 word_break_text"
-            >Eat well, feel well, that is the policy here. We will display
+          <p class="styleOne">Eat well, feel well, that is the policy here. We will display
             recipes that are healthy, period. We like the feeling the food we
-            eat gives us so we appreciate it even more than for how much tasty
-            it is and good for your body healthy food is.</v-card-text
-          >
+            eat gives us so we appreciate healthy food even more than for how much tasty
+            it is and good for your body.</p>
         </v-card>
       </v-col>
       <v-col md="7" cols="12">
