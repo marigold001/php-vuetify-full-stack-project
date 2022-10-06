@@ -1,5 +1,5 @@
 # Classic Gravy
-  A web-app showcasing recipes and cooking articles, designed for a professional cook to be able to curate content.
+  A web-app that includes a CMS and showcases recipes and cooking articles, designed for a professional cook to be able to curate content.
 
 ## Prerequisites
   Node.js
